@@ -1,0 +1,73 @@
+import numpy as np												
+import pylab as pl												
+import pandas as pd												
+import matlab.pylot as plt												
+import sklearn as skl												
+library(ggplot2)												
+library(readr) system("ls ../input")												
+water_qual<-read.csv("../users/user/document/madurai district water contamination.csv"	header=T	stringsAsFactor=FALSE)										
+str(water_qual)												
+head(water_qual)												
+tail(water_qual)												
+cnames<-c("s/n"	state	district	block	village	sodium	ph	copper	fluroid	nitrate	potassium	zinc	calcium)
+colnames(water_qual)<-cnames												
+library(ggplot2)												
+library(dplyr)												
+water_qual$year<-format(as.Date(water_qual$year	 format="%d/%m/%Y")	%Y)										
+ggplot(water_qual	aes(x=quality))+geom_bar(fill="chartreuse")										
+ggplot(water_qual	aes(x=year	y=quality	fill=factor(state)))+geom_bar(stat="identity")+theme(legend.position="bottom")									
+tn_wq_data<-water_qual %>% filter(state =="TAMIL NADU")												
+par(mfrow=c(1	2))											
+ggplot(tn_wq_data	aes(x=quality	fill=year))+geom_bar(position="dodge")+										
+theme(axis.text.x = element_text(angle = 90))+scale_fill_brewer(palette="Spectral")												
+ggplot(tn_wq_data	aes(x=quality	fill=year))+geom_bar(position="fill")+										
+ggtitle("Yearwise Water Quality in Tamilnadu")+scale_colour_brewer(palette="PRGn")												
+												
+												
+												
+sta_qual<-data.frame(table(water_qual$state	water_qual$quality	water_qual$year))										
+sta_qual<-sta_qual %>% arrange(desc(Freq))												
+p <- ggplot(data = sta_qual	 aes(x = Var1	 y = Freq	 group = Var2	 fill = Var2))								
+p <- p + geom_bar(stat = "identity"	 width = 0.5	 position = "dodge")										
+p <- p + theme_bw()												
+p <- p + theme(axis.text.x = element_text(angle = 90))												
+p<- p+ xlab("States")												
+p <-p+ylab("Count")												
+p <- p+ggtitle("State wise water Quality Proportion")+scale_fill_brewer(palette="Set1")												
+p												
+												
+												
+												
+												
+head(sta_qual)												
+												
+												
+												
+												
+sta_qual%>% ggplot(aes(x = Var3	 y = Freq	fill=Var2))+geom_bar(stat="identity")+theme(axis.text.x=element_text(angle=90	hjust=0.5))+facet_wrap(~ Var1)+labs(title="Water Degradation in Indian States"	x="Year"	y="Freq")							
+												
+												
+												
+affected<-data.frame(table(water_qual$state	water_qual$quality	water_qual$year	water_qual$district))									
+affected_fil<-affected %>%  filter(Var2=="Salinity" & Var1=="RAJASTHAN" & Freq>50)%>%arrange(desc(Freq))												
+head(affected_fil)												
+												
+												
+												
+												
+ggplot(affected_fil	aes(x=Var4	y=Freq	fill=Var3))+geom_bar(stat="identity"	position="dodge")+coord_flip()+scale_fill_brewer(palette="PuRd")+labs(title="Districts in Rajasthan which are Salinity Affected")								
+												
+												
+												
+												
+rankq<-sta_qual %>% 												
+  group_by(Var2) %>% 												
+  mutate(rank = rank(-Freq	 ties.method = "first"))											
+head(rankq)												
+												
+												
+												
+												
+												
+rankq %>% group_by(Var2)%>% filter(rank <15)%>% ggplot( aes(x = Var1	 											
+y = rank	color=Var3)) + geom_point(size=3	alpha=0.7) +facet_wrap(~Var2)+theme(axis.text.x=element_text(angle=90	hjust=0.5))+scale_color_manual(values=c("red"	purple	blue	green))+labs(title="Top 15 water Degradation states"	x="State"	y="Rank")				
