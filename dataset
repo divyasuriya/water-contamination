@@ -1,0 +1,25 @@
+s/no	statename	districtname	blockname	villagename	sodium	ph	copper	fluroid	nitrate micro k/m	pottasiummg/lit	zinc mg/lit	calcium mg/lit	year
+1	tamilnadu	madurai	thirumankalam	kokkulam	9mg/litre	7	0.0005mg/lit	9mg/lit	0.1	5.2	4	120	2018
+2	tamilnadu	madurai	thirumankalam	alampatty	18mg/litre	7	0.008mg/lit	7mg/lit	0.4	1.7	2	123	2018
+3	tamilnadu	madurai	thirumankalam	government officer colony	11mg/litre	7	0.0004mg/lit	8mg/lit	0.4	3	2.2	65	2018
+4	tamilnadu	madurai	thirumankalam	melakkotai	13mg/litre	7	0.0006mg/lit	4mg/lit	0.4	4.8	3	78	2018
+5	tamilnadu	madurai	thirumankalam	kappalur	10mg/litre	7	0.009mg/lit	7mg/lit	0.4	3	3.9	87	2018
+6	tamilnadu	madurai	thirumankalam	vaigaikulam	11mg/litre	7	0.0089mg/lit	8mg/lit	0.3	4	2.4	57	2018
+7	tamilnadu	madurai	thirumankalam	t.pudupatti	19mg/litre	7	0.0007mg/lit	9mg/lit	0.2	3.9	1.8	98	2018
+8	tamilnadu	madurai	thirumankalam	nehrunagar	17mg/litre	7	0.0009mg/lit	7mg/lit	0.1	2.2	4	90	2018
+9	tamilnadu	madurai	thirumankalam	old z  block	19mg/litre	7	0.0006mg/lit	9mg/lit	0.4	3.3	3	99	2018
+10	tamilnadu	madurai	thirumankalam	k.puliankulam	12mg/lit	7	0.0005mg/lit	10mg/lit	0.4	4.4	1.9	57	2018
+11	tamilnadu	madurai	madurai east city 	anaiyur	10mg/litre	7	0.0009mg/lit	9mg/lit	0.2	3	2.6	36	2018
+12	tamilnadu	madurai	madurai east city 	andalpuram	10mg/litre	7	0.0008mg/lit	7mg/lit	0.2	1.9	3.5	117	2018
+13	tamilnadu	madurai	madurai east city 	anjalnagar	20mg/litre	7	0.0009mg/lit	9mg/lit	0.3	2.5	3.7	113	2018
+14	tamilnadu	madurai	madurai east city 	anupanadi	14mg/litre	7	0.0007mg/lit	10mg/lit	0.3	5.1	3.5	75	2018
+15	tamilnadu	madurai	madurai east city 	arapalayam	19mg/litre	7	0.0006mg/lit	9mg/lit	0.4	4	2.5	47	2018
+16	tamilnadu	madurai	madurai east city 	alwarpuram	20mg/litre	7	0.0005mg/lit	8mg/lit	0.4	4.9	1.7	79	2018
+17	tamilnadu	madurai	madurai west block	alathur	15mg/litre	7	0.0007mg/lit	10mg/lit	0.3	5	4	66	2018
+18	tamilnadu	madurai	madurai west block	alamelunagar	16mg/litre	7	0.0005mg/lit	8mg/lit	0.3	5.2	3.7	77	2018
+19	tamilnadu	madurai	madurai west block	adalai	20mg/litre	7	0.0009mg/lit	8.5mg/lit	0.3	2	2.6	55	2018
+20	tamilnadu	madurai	madurai west block	agrini township	15mg/litre	7	0.0006mg/lit	9.9mg/lit	0.1	2.1	1.8	45	2018
+21	tamilnadu	madurai	madurai west block	anbu nagar	17mg/litre	7	0.0004mg/lit	9.98mg/lit	0.3	2.2	2.8	35	2018
+22	tamilnadu	madurai	madurai west block	vandiyur	20mg/litre	7	0.0007mg/lit	8.77mg/lit	0.4	3.1	3.8	47	2018
+23	tamilnadu	madurai	madurai west block	sathamangalam	19mg/litre	7	0.0005mg/lit	9.87mg/lit	0.4	4.6	1.4	87	2018
+24	tamilnadu	madurai	madurai west block	annanagar	17mg/litre	7	0.0006mg/lit	9.76mg/lit	0.4	5	3	122	2018
